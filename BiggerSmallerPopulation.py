@@ -78,7 +78,7 @@ def play(x, score, value):
                 + " ("
                 + str(list_of_dicts[newx][gamemode])
                 + ") "
-                + "is larger than the "
+                + "is smaller than the "
                 + gamemode
                 + " of "
                 + list_of_dicts[x]["country"]
