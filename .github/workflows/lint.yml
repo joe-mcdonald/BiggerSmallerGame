@@ -22,3 +22,21 @@ jobs:
         uses: psf/black@stable
         with:
           options: "--check"
+
+  isort:
+    name: Isort Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+
+      - name: Isort Lint
+        uses: isort/isort-action@v0.1.0
+        with:
+          sortPaths: "**/*.py"
+          configuration: "--check"
